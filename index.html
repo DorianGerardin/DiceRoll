@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+  <title>Dices</title>
+</head>
+<body>
+
+  <div id="appContainer">
+
+    <div id="inputContainer">
+      <label id="diceLabel" for="diceNumberInput">Number of Dice</label>
+      <div id="inputAndButton">
+        <input type="text" id="diceNumberInput" name="number" value="1" min="1" max="30" placeholder="1" />
+        <div id="rollButton">Roll</div>
+      </div>
+    </div>
+
+    <div id="diceGrid" class="hidden"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
