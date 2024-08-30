@@ -32,18 +32,35 @@ document.getElementById("rollButton").addEventListener("click", () => {
 
 function throwDices(NumberOfDices)
 {
-  if(NumberOfDices < 1 || NumberOfDices > 30)
+  if(NumberOfDices < 1)
   {
+    alert("Minimum is 1")
+    return
+  }
+
+  if(NumberOfDices > 50)
+  {
+    alert("Maximum is 50")
+    return
+  }
+
+  if(isNaN(NumberOfDices)) {
+    document.getElementById("diceNumberInput").value = ""
     return
   }
 
   let DiceGrid = document.getElementById("diceGrid");
   DiceGrid.classList.replace("hidden", "visible")
   DiceGrid.innerHTML = ''
+  let Sum = 0
   for (let i = 0; i < NumberOfDices; i++) {
     let DiceValue = Math.floor(Math.random() * 6) + 1;
+    Sum += DiceValue;
     createDice(DiceValue);
   }
+
+  document.getElementById("diceSumValue").innerText = Sum.toString();
+  document.getElementById("diceSum").classList.replace("hidden", "visible")
 }
 
 function createDice(DiceValue)

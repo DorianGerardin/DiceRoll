@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-  <title>Dices</title>
+  <title>Dice Roller</title>
 </head>
 <body>
 
@@ -19,6 +19,11 @@
         <input type="text" id="diceNumberInput" name="number" value="1" min="1" max="30" placeholder="1" />
         <div id="rollButton">Roll</div>
       </div>
+    </div>
+
+    <div id="diceSum" class="hidden">
+      Sum:
+      <span id="diceSumValue"></span>
     </div>
 
     <div id="diceGrid" class="hidden"></div>

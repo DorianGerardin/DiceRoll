@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   width: 90%;
   align-items: center;
-  row-gap: 1em;
+  row-gap: 0.5em;
 }
 
 #diceGrid {
@@ -41,6 +41,15 @@ body {
 
 .visible {
   visibility: visible;
+}
+
+#diceSum {
+  font-size: 2.5em;
+}
+
+#diceSumValue {
+  color: rgb(255, 119, 27);
+
 }
 
 .dice {
@@ -149,10 +158,13 @@ body {
   background-size: 12px 12px;
   background-position: 500px 500px;
   padding: 0 1em;
-  /*font-size: 2em;*/
   border-radius: 0.35em;
   border: 0.1em solid rgb(116, 116, 116);
   cursor: pointer;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
