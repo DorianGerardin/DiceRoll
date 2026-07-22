@@ -25,6 +25,13 @@ const DICE_FACE_DOT_POSITIONS = {
   ],
 };
 
+document.getElementById("diceEye").addEventListener("click", (event) => {
+  let dicesum = event.currentTarget.querySelector("#diceSumValue")
+  let resultEye = event.currentTarget.querySelector("svg")
+  dicesum.classList.toggle("nothere", !dicesum.classList.contains("nothere"))
+  resultEye.classList.toggle("nothere", !dicesum.classList.contains("nothere"))
+})
+
 document.getElementById("rollButton").addEventListener("click", () => {
   let NumberOfDices = document.getElementById("diceNumberInput").value
   throwDices(NumberOfDices)

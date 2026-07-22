@@ -35,21 +35,46 @@ body {
   margin-bottom: 1em;
 }
 
+.nothere {
+  display: none;
+}
+
+.here {
+  display: initial;
+}
+
 .hidden {
   visibility: hidden;
+}
+
+.blur {
+  filter: blur(30px);
 }
 
 .visible {
   visibility: visible;
 }
 
+#diceEye {
+  user-select: none;
+  cursor: pointer;
+  min-width: 64px;
+}
+
+#diceSum > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #diceSum {
+  display: flex;
+  column-gap: 12px;
   font-size: 2.5em;
 }
 
 #diceSumValue {
   color: rgb(255, 119, 27);
-
 }
 
 .dice {
